@@ -1,18 +1,3 @@
-"""
-main.py
-=======
-Command-line entry point. Runs the full pipeline end-to-end:
-
-    fetch data -> engineer features -> train models -> walk-forward evaluate
-    -> backtest -> save best model + report
-
-Usage
------
-    python main.py --ticker AAPL --start 2015-01-01 --source yfinance
-    python main.py --ticker DEMO --source synthetic          # offline demo
-    python main.py --ticker MSFT --horizon 5 --folds 6
-"""
-
 from __future__ import annotations
 
 import argparse

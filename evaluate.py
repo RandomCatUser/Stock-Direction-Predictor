@@ -1,22 +1,4 @@
-"""
-evaluate.py
-===========
-Honest evaluation of a stock-direction classifier: standard classification
-metrics, walk-forward robustness checks, and a simple long/flat strategy
-backtest translated into $ terms (not just accuracy %).
 
-Why go beyond accuracy?
------------------------
-Accuracy alone can be misleading for trading:
-  - A model can have >50% accuracy but still lose money if it's right on
-    small moves and wrong on big ones.
-  - A model can look great on one lucky test window and fail elsewhere --
-    that's what walk-forward validation and reporting variance across
-    folds is for.
-  - Transaction costs are ignored in almost every "amazing 90% accuracy"
-    stock prediction tutorial online; we include a cost assumption here to
-    stay honest.
-"""
 
 from __future__ import annotations
 

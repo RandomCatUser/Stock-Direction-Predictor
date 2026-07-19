@@ -1,31 +1,4 @@
-"""
-features.py
-===========
-Turns raw OHLCV data into a machine-learning-ready feature table.
 
-Design reasoning
-----------------
-Raw price is not stationary (it trends and its scale drifts over years),
-which makes it a poor direct input to most ML models. Instead we engineer
-features that are:
-  1. Roughly stationary (returns, ratios, oscillators bounded in a range)
-  2. Reflective of concepts technical traders actually use (momentum, trend,
-     volatility, volume pressure) so the model has meaningful signal to find
-  3. Free of "lookahead bias" -- every feature at row t uses only information
-     available up to and including day t, never future data.
-
-We predict a CLASSIFICATION target: will the stock go UP or DOWN over the
-next `horizon` trading days? This is deliberately chosen over predicting an
-exact future price, because:
-  - Exact price regression on noisy financial series tends to degenerate
-    into the model just predicting "tomorrow ~= today" (a naive/persistence
-    forecast), which looks deceptively good on error metrics but is useless
-    for decision-making.
-  - Direction (up/down) is what's actually needed to act (buy/sell), is
-    more robust to scale, and gives us clean classification metrics
-    (accuracy, precision, recall, ROC-AUC) to honestly evaluate skill above
-    a coin-flip baseline.
-"""
 
 from __future__ import annotations
 

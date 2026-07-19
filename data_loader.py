@@ -1,21 +1,4 @@
-"""
-data_loader.py
-==============
-Responsible for getting OHLCV (Open/High/Low/Close/Volume) stock data into a
-clean pandas DataFrame, from either a live source (Yahoo Finance via
-`yfinance`) or a synthetic generator used for offline testing/demoing.
 
-Why two sources?
-----------------
-Real market data requires an internet connection to Yahoo Finance's servers.
-Many sandboxed / CI / offline environments block that traffic. Rather than
-let the whole project fail in those environments, we generate a realistic
-synthetic OHLCV series (via a mean-reverting random walk with volatility
-clustering) so the rest of the pipeline -- features, models, evaluation --
-can always be exercised and taught end-to-end.
-
-Swap between them with the `source` argument.
-"""
 
 from __future__ import annotations
 

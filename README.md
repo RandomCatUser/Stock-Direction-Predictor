@@ -16,7 +16,7 @@ before treating any output as investment advice — it isn't.
 | `model.py` | Chronological train/test split, walk-forward validation, 3 model families (Logistic Regression, Random Forest, Gradient Boosting) |
 | `evaluate.py` | Classification metrics, confusion matrix, walk-forward robustness report, and a cost-aware backtest vs. buy-and-hold |
 | `main.py` | CLI that runs the entire pipeline end-to-end |
-| `notebooks/stock_prediction_walkthrough.ipynb` | The same pipeline, run step-by-step with full reasoning/explanation at each stage |
+| `docs/stock_prediction_walkthrough.ipynb` | The same pipeline, run step-by-step with full reasoning/explanation at each stage |
 
 ## Setup
 
@@ -42,7 +42,7 @@ python main.py --ticker MSFT --horizon 5 --folds 8
 Or open the notebook for the full guided walkthrough:
 
 ```bash
-jupyter notebook notebooks/stock_prediction_walkthrough.ipynb
+jupyter notebook docs/stock_prediction_walkthrough.ipynb
 ```
 
 ## Key design decisions (the "why")

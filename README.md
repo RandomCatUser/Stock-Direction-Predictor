@@ -83,4 +83,5 @@ discipline. **It is not financial advice**, and no model here should be
 used to make real trading decisions without a great deal of additional
 rigor (proper risk management, realistic slippage/costs, out-of-sample
 testing across many tickers and periods, etc.).
-# Stock-Predictor
+
+
